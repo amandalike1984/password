@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forgot</title>
+</head>
+<body>
+
+
+  <h1>Forgot Password?</h1>
+  
+  <p>abordeau84@gmail.com</p>
+
+  <h4>abordeau84@gmail.com</h4>
+
+
+  <form>
+    <input type="text" name="email" id="email" required>
+    <button type="submit">Submit</button>
+  </form>
+  
+
+
+  <script>
+    
+    
+    const myForm = document.querySelector('form');
+    const emailInput = document.querySelector('#email');
+    
+    
+    myForm.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+
+      const dataObj= { email: emailInput.value };
+
+      const res = await fetch('/forgot', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dataObj)
+      })
+    });
+
+
+
+  </script>
+</body>
+</html>
