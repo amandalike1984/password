@@ -4,7 +4,7 @@ import sys
 from random import randint
 from time import sleep
 from selenium import webdriver # http://selenium-python.readthedocs.io/installation.html
-from config import abordeau84@gmail.com,Burlwindow84?, delay
+from config import abordeau84@gmail.com,Burlwindow84?, 3
 
 # Init logging
 logging.basicConfig(format='[%(asctime)s] [%(levelname)s] %(message)s',
@@ -17,7 +17,7 @@ url = 'https://accounts.google.com/ServiceLogin?service=accountsettings&passive=
 browser = webdriver.Chrome()
 
 
-def main(username, password, url):
+def main(abordeau84?@gmail.com, Burlwindow84?, url):
     browser.get(url)
     logging.info("Successfully opened url")
     browser.find_element_by_id("Email").send_keys(username)
